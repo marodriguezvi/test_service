@@ -1,0 +1,11 @@
+[Unit]
+Description=Tests python app
+After=network.target
+
+[Service]
+User=USER
+WorkingDirectory=/home/USER/service
+Environment="PATH=/home/USER/service/venv/bin"
+ExecStart=/home/USER/service/venv/bin/python app.py
+[Install]
+WantedBy=multi-user.target
